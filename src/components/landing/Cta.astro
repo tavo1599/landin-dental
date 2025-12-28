@@ -1,0 +1,65 @@
+---
+// src/components/landing/Cta.astro
+---
+
+<section class="relative py-24 overflow-hidden">
+  
+  <!-- FONDO: Gradiente Oscuro y Elegante -->
+  <div class="absolute inset-0 bg-slate-900">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800/40 via-slate-900 to-transparent"></div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[100px]"></div>
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]"></div>
+  </div>
+
+  <div class="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+    
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight" data-aos="fade-up">
+      Moderniza tu consultorio <br>
+      <span class="text-blue-400">hoy mismo.</span>
+    </h2>
+    
+    <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+      Únete a los odontólogos que ya ahorran más de 10 horas a la semana automatizando sus citas, historias clínicas y facturación.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="200">
+      
+      <!-- 
+          ACCIÓN 1: SOLICITAR PRUEBA (Igual que en el Hero)
+          Mensaje: Pide los datos para crear la cuenta.
+      -->
+      <a 
+        href="https://wa.me/51906771606?text=Hola%2C%20quiero%20solicitar%20mi%20prueba%20gratis%20de%207%20d%C3%ADas%20del%20sistema%20Sonriandes.%0A%0AMis%20datos%20son%3A%0A%2A%20Nombre%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Tel%C3%A9fono%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Email%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Direcci%C3%B3n%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Nombre%20Admin%3A%20%0A%2A%20Tel%C3%A9fono%20Admin%3A%20%0A%2A%20Email%20Admin%3A%20" 
+        target="_blank"
+        class="group relative px-8 py-4 bg-blue-600 text-white font-bold rounded-full text-lg shadow-xl shadow-blue-900/50 hover:bg-blue-500 transition-all hover:scale-105 hover:shadow-blue-500/30 overflow-hidden"
+      >
+        <span class="relative z-10 flex items-center gap-2">
+            <!-- Icono Whatsapp pequeño -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Prueba Gratis 7 días
+        </span>
+        <div class="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-blue-500/50"></div>
+      </a>
+
+      <!-- 
+          ACCIÓN 2: AGENDAR DEMO
+          Mensaje: "Hola, me interesa conocer más sobre Sonriandes. Quisiera agendar una demostración..."
+      -->
+      <a 
+        href="https://wa.me/51906771606?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20Sonriandes.%20Quisiera%20agendar%20una%20demostraci%C3%B3n%20para%20ver%20c%C3%B3mo%20funciona." 
+        target="_blank"
+        class="px-8 py-4 rounded-full border border-slate-600 text-slate-300 font-medium hover:bg-white/5 hover:text-white hover:border-white transition-all flex items-center gap-2"
+      >
+        Agendar una Demo
+      </a>
+      
+    </div>
+
+    <p class="mt-8 text-sm text-slate-500" data-aos="fade-in" data-aos-delay="300">
+      Sin tarjetas de crédito • Cancela cuando quieras • Soporte en español
+    </p>
+
+  </div>
+</section>

@@ -1,0 +1,127 @@
+---
+// src/components/landing/Hero.astro
+---
+
+<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- COLUMNA IZQUIERDA -->
+      <div data-aos="fade-right" data-aos-duration="1000">
+        
+        <div class="inline-flex items-center px-3 py-1 rounded-full border border-blue-100 bg-blue-50 text-blue-600 text-sm font-medium mb-6">
+          <span class="flex h-2 w-2 rounded-full bg-blue-600 mr-2"></span>
+          Innovación: App Móvil para Doctores incluida
+        </div>
+
+        <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6" data-aos="fade-up" data-aos-delay="100">
+          Tu clínica dental,<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">
+            siempre contigo.
+          </span>
+        </h1>
+
+        <p class="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+          Olvídate de estar atado al escritorio. Agenda citas, revisa historias clínicas y controla los pagos a cuotas desde tu celular o computadora.
+        </p>
+                
+        <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
+          <!-- 
+             ACCIÓN 1: SOLICITAR CUENTA POR WHATSAPP 
+             Reemplaza el número 51999999999 por tu número real.
+             El mensaje ya está codificado para que aparezca escrito.
+          -->
+          <a 
+            href="https://wa.me/51906771606?text=Hola%2C%20quiero%20solicitar%20mi%20prueba%20gratis%20de%207%20d%C3%ADas%20del%20sistema%20Sonriandes.%0A%0AMis%20datos%20son%3A%0A%2A%20Nombre%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Tel%C3%A9fono%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Email%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Direcci%C3%B3n%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Nombre%20Admin%3A%20%0A%2A%20Tel%C3%A9fono%20Admin%3A%20%0A%2A%20Email%20Admin%3A%20" 
+            target="_blank"
+            class="px-8 py-4 rounded-full bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/30 text-center flex items-center justify-center gap-2"
+          >
+            <!-- Icono de WhatsApp para reforzar -->
+            
+            Prueba Gratis
+          </a>
+
+          <!-- ACCIÓN 2: Scroll para ver más info -->
+          <a 
+            href="#features" 
+            class="px-8 py-4 rounded-full bg-white text-slate-700 border border-slate-200 font-bold text-lg hover:bg-slate-50 transition-all text-center flex items-center justify-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Ver Demo
+          </a>
+        </div>
+        
+        <div class="mt-8 flex items-center gap-4 text-sm text-slate-500" data-aos="fade-in" data-aos-delay="400">
+          <p>Con la colaboración de <span class="font-bold text-slate-700">Dentistas especializados </span>para el desarrollo del software</p>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA: Imagen con Efecto 3D CSS -->
+      <div class="relative lg:h-[600px] w-full flex items-center justify-center" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+        
+        <div class="absolute inset-0 bg-gradient-to-tr from-blue-200 to-teal-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+
+        <!-- Agregamos la clase 'perspective-container' aquí -->
+        <div class="relative z-10 w-full max-w-[650px] perspective-container group">
+            
+            <!-- Agregamos la clase 'hero-image-3d' aquí -->
+            <div class="hero-image-3d rounded-xl shadow-2xl shadow-blue-900/20 bg-white border-4 border-white/50 overflow-hidden">
+                
+                <img 
+                    src="/dashboard-demo.png" 
+                    alt="Interfaz del Sistema Sonriandes" 
+                    class="w-full h-auto object-cover"
+                />
+                
+                <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+            </div>
+
+            <div class="absolute -right-4 top-20 z-20 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border border-white/40 animate-[bounce_3s_infinite] group-hover:pause">
+                <div class="flex items-center gap-3">
+                    <div class="bg-green-100 p-2 rounded-full text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 font-semibold">Notificación WhatsApp</p>
+                        <p class="text-sm font-bold text-slate-800">Cita Confirmada ✅</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="absolute -bottom-10 -left-10 z-0 opacity-20 pointer-events-none">
+            <svg width="100" height="100" fill="none">
+                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="2" class="text-slate-900" fill="currentColor" />
+                </pattern>
+                <rect width="100" height="100" fill="url(#dots)" />
+            </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 right-0 h-16 bg-slate-50 transform -skew-y-2 origin-bottom-right translate-y-8"></div>
+
+</section>
+
+<style>
+  /* CSS Estándar para forzar el 3D */
+  .perspective-container {
+    perspective: 1000px; /* Define la profundidad del entorno 3D */
+  }
+
+  .hero-image-3d {
+    /* Estado inicial: Inclinado */
+    transform: rotateY(-12deg) rotateX(6deg);
+    transition: transform 0.7s ease-out; /* Suavizado */
+  }
+
+  /* Estado al pasar el mouse sobre el grupo padre (.group) */
+  .group:hover .hero-image-3d {
+    transform: rotateY(0deg) rotateX(0deg); /* Se endereza */
+  }
+</style>

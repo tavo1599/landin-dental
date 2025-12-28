@@ -1,0 +1,87 @@
+---
+// src/components/landing/Navbar.astro
+const navItems = [
+  { name: "Características", href: "#features" },
+  { name: "Preguntas", href: "#faq" },
+  { name: "Precios", href: "#pricing" },
+];
+---
+
+<nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-100 bg-white/80 backdrop-blur-md transition-all">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 py-3">
+    
+    <a href="/" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-900 hover:opacity-80 transition-opacity">
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="85 0 335 80" 
+            role="img" 
+            aria-label="Sonriandes Logo"
+            class="h-8 md:h-11 w-auto fill-current" 
+        >
+            <text x="90" y="52" font-family="inherit" font-size="44" font-weight="700">
+            s
+            </text>
+            <g transform="translate(115,10)">
+            <circle cx="24" cy="24" r="24" fill="#19A7CE"/>
+            <path d="M12 28 C18 36, 30 36, 36 28" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+            <text x="165" y="52" font-family="inherit" font-size="44" font-weight="700">
+            nriAndes
+            </text>
+        </svg>
+    </a>
+
+    <div class="flex md:order-2 space-x-3 md:space-x-4 rtl:space-x-reverse">
+      <!-- Botón INGRESAR (Va al login de tu sistema) -->
+      <a 
+        href="https://www.sonriandes.com/login" 
+        target="_blank"
+        class="hidden sm:flex items-center justify-center px-4 py-2 text-sm font-medium text-slate-600 bg-transparent rounded-full hover:bg-slate-100 transition-colors focus:ring-4 focus:ring-slate-200"
+      >
+        Ingresar
+      </a>
+      
+      <!-- Botón PRUEBA GRATIS (Va a WhatsApp) -->
+      <a 
+        href="https://wa.me/51906771606?text=Hola%2C%20quiero%20solicitar%20mi%20prueba%20gratis%20de%207%20d%C3%ADas%20del%20sistema%20Sonriandes.%0A%0AMis%20datos%20son%3A%0A%2A%20Nombre%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Tel%C3%A9fono%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Email%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Direcci%C3%B3n%20de%20la%20Cl%C3%ADnica%3A%20%0A%2A%20Nombre%20Admin%3A%20%0A%2A%20Tel%C3%A9fono%20Admin%3A%20%0A%2A%20Email%20Admin%3A%20"
+        target="_blank"
+        class="flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all shadow-lg shadow-blue-600/20"
+      >
+        Prueba Gratis
+      </a>
+      
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-200" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Abrir menú</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+        {navItems.map((item) => (
+            <li>
+            <a href={item.href} class="block py-2 px-3 text-slate-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 transition-colors">
+                {item.name}
+            </a>
+            </li>
+        ))}
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+  // Lógica simple para abrir/cerrar menú móvil
+  const btn = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+  const menu = document.getElementById('navbar-sticky');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+  }
+</script>
+
+</nav>

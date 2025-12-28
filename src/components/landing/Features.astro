@@ -1,0 +1,119 @@
+---
+// src/components/landing/Features.astro
+import { LayoutDashboard, Users, Calendar, FileText, ShieldCheck, Activity, MessageCircle, DollarSign, Smartphone, Globe } from 'lucide-vue-next';
+
+const features = [
+  {
+    title: "App Móvil Nativa",
+    description: "No necesitas prender la computadora. Agenda pacientes nuevos y revisa tus citas de mañana desde tu celular.",
+    icon: Smartphone, // Importar icono Smartphone de lucide
+    color: "bg-blue-50 text-blue-600",
+    size: "col-span-1 md:col-span-4"
+  },
+  {
+    title: "Odontograma Inteligente",
+    description: "Pinta tratamientos con un clic y el sistema genera el presupuesto automáticamente. Calcula totales y cuotas al instante.",
+    icon: Activity,
+    color: "bg-teal-50 text-teal-600",
+    size: "col-span-1 md:col-span-5", 
+    highlight: true 
+  },
+  {
+    title: "Alertas de Cobranza",
+    description: "El sistema detecta quién te debe. Haz seguimiento a los pagos en cuotas y evita perder dinero.",
+    icon: DollarSign, // Importar DollarSign
+    color: "bg-green-50 text-green-600",
+    size: "col-span-1 md:col-span-3"
+  },
+  {
+    title: "Anamnesis Especializada",
+    description: "Fichas diseñadas por especialistas: General, Odontopediatría y Ortodoncia con campos específicos.",
+    icon: FileText,
+    color: "bg-orange-50 text-orange-600",
+    size: "col-span-1 md:col-span-3"
+  },
+  {
+    title: "Recordatorios WhatsApp",
+    description: "Alertas diarias de citas y cumpleaños. Envía mensajes pre-diseñados con un solo clic para confirmar asistencia.",
+    icon: MessageCircle, // Importar MessageCircle
+    color: "bg-indigo-50 text-indigo-600",
+    size: "col-span-1 md:col-span-3"
+  },
+  {
+    title: "Seguridad en la Nube",
+    description: "Tus pacientes están seguros. Copias de seguridad diarias y acceso encriptado desde cualquier lugar.",
+    icon: ShieldCheck,
+    color: "bg-slate-100 text-slate-600",
+    size: "col-span-1 md:col-span-6" 
+  },
+  {
+  title: "Tu Propia Página Web",
+  description: "Te regalamos una web profesional (tunombre.dentalsoft.com) para que tus pacientes te encuentren en Google y reserven citas online.",
+  icon: Globe,
+  color: "bg-purple-50 text-purple-600",
+  size: "col-span-1 md:col-span-6", // Tarjeta ancha
+  highlight: true // Que destaque
+}
+];
+---
+
+<section class="py-24 bg-slate-50 relative overflow-hidden" id="features">
+  
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div class="absolute top-10 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl mix-blend-multiply"></div>
+        <div class="absolute bottom-10 left-0 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl mix-blend-multiply"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Todo lo que necesitas para tu consultorio</h2>
+            <p class="text-lg text-slate-600">Deja de usar Excel y papel. Centraliza toda la operación de tu clínica en una sola plataforma en la nube.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            {features.map((feature, index) => (
+                // AQUI ESTA LA MAGIA: data-aos-delay calculado
+                <div 
+                    class={`relative group overflow-hidden rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white border border-slate-100 ${feature.size}`}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                >
+                    
+                    <div class={`absolute -right-4 -top-4 w-24 h-24 rounded-full opacity-20 transition-transform group-hover:scale-150 ${feature.color.split(' ')[0]}`}></div>
+                    
+                    <div class="relative z-10">
+                        <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${feature.color}`}>
+                            <feature.icon class="w-6 h-6" />
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
+                        <p class="text-slate-500 leading-relaxed">{feature.description}</p>
+                    </div>
+
+                    {feature.highlight && (
+                        <div class="absolute bottom-0 right-0 w-1/2 opacity-20 translate-x-4 translate-y-4">
+                           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="fill-current text-teal-500">
+                              <path d="M45.7,-70.5C58.9,-62.5,69.3,-49.4,75.9,-34.7C82.5,-20,85.4,-3.7,82.4,11.5C79.4,26.7,70.6,40.8,59.3,51.7C48,62.6,34.3,70.3,19.6,73.3C4.9,76.3,-10.8,74.6,-25.3,69.3C-39.8,64,-53.1,55.1,-63.4,43.2C-73.7,31.3,-81,16.4,-80.3,1.9C-79.6,-12.6,-70.9,-26.7,-60.1,-38.3C-49.3,-49.9,-36.4,-59,-22.9,-66.8C-9.4,-74.6,4.7,-81.1,19.8,-80.4C34.9,-79.7,51,-71.8,45.7,-70.5Z" transform="translate(100 100)" />
+                           </svg>
+                        </div>
+                    )}
+                </div>
+            ))}
+
+        </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+        <svg 
+            class="relative block w-[calc(100%+1.3px)] h-[50px] fill-white rotate-180" 
+            data-name="Layer 1" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none"
+        >
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
+    </div>
+</section>

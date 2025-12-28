@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/landing/Navbar.astro';
+import Footer from '../components/landing/Footer.astro';
+---
+
+<Layout title="Política de Privacidad | SonriAndes">
+  <Navbar />
+  
+  <main class="pt-32 pb-20 max-w-4xl mx-auto px-4 flex-1 w-full">
+    <h1 class="text-4xl font-bold text-slate-900 mb-8">Política de Privacidad</h1>
+    
+    <div class="prose prose-slate max-w-none text-slate-600">
+      <p>En SonriAndes, nos tomamos muy en serio la privacidad de sus datos y la de sus pacientes.</p>
+
+      <h3>1. Información que recopilamos</h3>
+      <p>Recopilamos información necesaria para el funcionamiento del sistema, como nombres, correos electrónicos, datos de facturación y los datos clínicos que usted ingresa sobre sus pacientes.</p>
+
+      <h3>2. Uso de la información</h3>
+      <p>Utilizamos la información para:</p>
+      <ul class="list-disc pl-5 mb-4">
+        <li>Proporcionar y mantener el servicio.</li>
+        <li>Notificarle sobre cambios en nuestro servicio.</li>
+        <li>Brindar soporte al cliente.</li>
+        <li>Detectar, prevenir y abordar problemas técnicos.</li>
+      </ul>
+
+      <h3>3. Seguridad de los Datos</h3>
+      <p>La seguridad de sus datos es importante para nosotros. Utilizamos encriptación SSL y copias de seguridad diarias en servidores seguros (Render) para proteger su información contra accesos no autorizados.</p>
+
+      <h3>4. Compartir datos</h3>
+      <p>No vendemos, comercializamos ni transferimos su información personal ni la de sus pacientes a terceros.</p>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
