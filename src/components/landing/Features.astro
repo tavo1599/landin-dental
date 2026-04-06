@@ -1,12 +1,13 @@
 ---
 // src/components/landing/Features.astro
-import { LayoutDashboard, Users, Calendar, FileText, ShieldCheck, Activity, MessageCircle, DollarSign, Smartphone, Globe } from 'lucide-vue-next';
+// Importamos el nuevo icono 'Bot' de lucide
+import { LayoutDashboard, Users, Calendar, FileText, ShieldCheck, Activity, MessageCircle, DollarSign, Smartphone, Globe, Bot } from 'lucide-vue-next';
 
 const features = [
   {
     title: "App Móvil Nativa",
     description: "No necesitas prender la computadora. Agenda pacientes nuevos y revisa tus citas de mañana desde tu celular.",
-    icon: Smartphone, // Importar icono Smartphone de lucide
+    icon: Smartphone, 
     color: "bg-blue-50 text-blue-600",
     size: "col-span-1 md:col-span-4"
   },
@@ -21,7 +22,7 @@ const features = [
   {
     title: "Alertas de Cobranza",
     description: "El sistema detecta quién te debe. Haz seguimiento a los pagos en cuotas y evita perder dinero.",
-    icon: DollarSign, // Importar DollarSign
+    icon: DollarSign, 
     color: "bg-green-50 text-green-600",
     size: "col-span-1 md:col-span-3"
   },
@@ -35,7 +36,7 @@ const features = [
   {
     title: "Recordatorios WhatsApp",
     description: "Alertas diarias de citas y cumpleaños. Envía mensajes pre-diseñados con un solo clic para confirmar asistencia.",
-    icon: MessageCircle, // Importar MessageCircle
+    icon: MessageCircle, 
     color: "bg-indigo-50 text-indigo-600",
     size: "col-span-1 md:col-span-3"
   },
@@ -47,13 +48,20 @@ const features = [
     size: "col-span-1 md:col-span-6" 
   },
   {
-  title: "Tu Propia Página Web",
-  description: "Te regalamos una web profesional (tunombre.dentalsoft.com) para que tus pacientes te encuentren en Google y reserven citas online.",
-  icon: Globe,
-  color: "bg-purple-50 text-purple-600",
-  size: "col-span-1 md:col-span-6", // Tarjeta ancha
-  highlight: true // Que destaque
-}
+    title: "Tu Propia Página Web",
+    description: "Te regalamos una web profesional (tunombre.sonriandes.com) para que tus pacientes te encuentren en Google y reserven citas online.",
+    icon: Globe,
+    color: "bg-purple-50 text-purple-600",
+    size: "col-span-1 md:col-span-6", 
+    highlight: true 
+  },
+  {
+    title: "Asistente Proactivo",
+    description: "Recibe un resumen diario de tu agenda. El sistema te avisa qué pacientes no regresaron en meses y te recuerda cobros pendientes del día.",
+    icon: Bot,
+    color: "bg-rose-50 text-rose-600",
+    size: "col-span-1 md:col-span-6"
+  }
 ];
 ---
 
@@ -74,7 +82,6 @@ const features = [
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
             
             {features.map((feature, index) => (
-                // AQUI ESTA LA MAGIA: data-aos-delay calculado
                 <div 
                     class={`relative group overflow-hidden rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white border border-slate-100 ${feature.size}`}
                     data-aos="fade-up"
