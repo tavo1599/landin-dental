@@ -16,7 +16,8 @@ const plans = [
       "Consulta DNI (Reniec)",
       "Odontograma y Periodontograma",
       "Caja Diaria y Control de Gastos",
-      "Dashboard y Reportes Básicos"
+      "Dashboard y Reportes Básicos",
+      "Registro de 500 pacientes"
     ],
     missing: [
       "App Móvil para Doctores",
@@ -34,12 +35,12 @@ const plans = [
     priceAnnual: 900,
     features: [
       "Múltiples Doctores y Asistentes",
-      "App Móvil (Android/iOS)", 
+      "App Móvil (Android)", 
       "Página Web de tu Clínica", 
       "Todo lo del Plan Consultorio",
       "Auditoría de Acciones (Seguridad)",
       "Soporte VIP Prioritario",
-      "Firma Digital (Próximamente)"
+      "Firma Digital"
     ],
     missing: [],
     highlight: true, 
